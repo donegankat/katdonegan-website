@@ -1,0 +1,11 @@
+.projectHeader {
+	margin-bottom: 0;
+}
+
+.tagsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	grid-column-gap: 8px;
+	grid-row-gap: 8px;
+	margin-top: 4px;
+}
