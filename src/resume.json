@@ -172,6 +172,7 @@
 				"firestore",
 				"api",
 				"scss",
+				"bootstrap",
 				"cicd"
 			],
 			"startDate": "2022-07-01",
@@ -183,7 +184,7 @@
 			"name": "Slack API Bot",
 			"description": "A .NET 6 console application used to integrate with the Slack API and perform tasks like posting automatic announcements. This tool can integrate with Azure DevOps pipelines for builds, unit tests, and scheduled executions. This concept was originally developed as a company-wide communication and productivity tool, and was built in order to annouce newly created channels to the company each week so that as the team continued to grow, we had better visibility into what was happening across the company.",
 			"highlights": [""],
-			"keywords": ["dotnet", "csharp", "azure devops", "api", "slack"],
+			"keywords": ["dotnet", "csharp", "api", "slack", "azure devops"],
 			"startDate": "2022-07-01",
 			"type": "application",
 			"url": "https://github.com/donegankat/SlackApiBot"
@@ -199,12 +200,12 @@
 		},
 		{
 			"name": "Personal Website",
-			"description": "You're here right now!",
+			"description": "You're here right now! This site was built using React and Material UI, and is hosted on Google Firebase. This site pulls data dynamically from a file that (mostly) follows the [JSON Resume spec](https://jsonresume.org/), with a few exceptions where I needed additional attributes beyond what the spec supported. That data is used to dynamically build much of the content on the site, including the links to my socials and even this project list.",
 			"highlights": [""],
-			"keywords": ["react", "typescript", "firebase", "scss"],
+			"keywords": ["react", "typescript", "firebase", "scss", "material ui"],
 			"startDate": "2022-08-01",
 			"type": "application",
-			"url": "https://github.com/donegankat"
+			"url": "https://github.com/donegankat/katdonegan-website"
 		}
 	],
 	"meta": {
