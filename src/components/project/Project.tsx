@@ -1,4 +1,5 @@
 import { Chip, Icon } from "@mui/material";
+import { convertToObject, JsxElement } from "typescript";
 import styles from "./Project.module.scss";
 
 interface ProjectProps {
@@ -15,45 +16,113 @@ interface ProjectProps {
  * Builds a single project to add to the list of projects.
  */
 export default function Project(props: ProjectProps) {
-	/**
-	 * Returns an array of elements to render on the screen. Normal text is returned as-is, but
-	 * this method also parses the text provided and searches for any links which use markdown
-	 * syntax. Markdown links are returned as HTML anchor tags instead of normal text.
-	 * @param text
-	 * @returns
-	 */
-	const parseMarkdownLinks = (text: string) => {
-		var elements = [];
-		var startingIndex = 0;
+	const parseMarkdown = (text: string) => {
+		// Parse and handle links.
+		const parsedMarkdownWithLinks = findAndReplaceMarkdownTextWithHtml(
+			[text],
+			// Find all portions of the string which match the pattern "[some text](some link)", capture
+			// the text and link values, and use those to build HTML anchor elements for the links.
+			/\[([^\]]*)\]\(([^)]*)\)/gim,
+			buildMarkdownLink
+		);
 
-		// Find all portions of the string which match the pattern "[some text](some link)", capture
-		// the text and link values, and use those to build HTML anchor elements for the links.
-		var matches = text.matchAll(/\[([^\]]*)\]\(([^)]*)\)/gim);
-		for (const match of matches) {
-			if (match && match.index && match.index > 0 && match.length === 3) {
-				// Grab all text that came before the link we just found.
-				elements.push(text.substring(startingIndex, match.index));
+		// Parse and handle line breaks.
+		const parsedMarkdownWithLineBreaks = findAndReplaceMarkdownTextWithHtml(
+			parsedMarkdownWithLinks,
+			/(<br\s?\/>)/gim,
+			buildMarkdownLineBreak
+		);
 
-				// Build the link's anchor tag.
-				elements.push(
-					<a key={`description-link-${match.index}`} href={match[2]}>
-						{match[1]}
-					</a>
-				);
-
-				// Keep track of where we left off.
-				startingIndex = match.index + match[0].length;
-			}
-		}
-
-		// Grab whatever text may be leftover before we exit.
-		elements.push(text.substring(startingIndex + 1));
-
-		return elements;
+		return parsedMarkdownWithLineBreaks;
 	};
 
 	/**
-	 * Loads the MD-specified icon according to whichever approach is appropriate for the icon's source.
+	 * Performs a generic scan of the given content and searches for the provided regex, replaces it
+	 * as needed, and returns the result as an array of elements to render on the screen.
+	 * Each match it finds will have the surrounding, normal text content preserved, but the matching
+	 * content will be replaced by the element(s) built by the provided builder function.
+	 * @param elementsToParse
+	 * @param regexToFind
+	 * @param buildReplacementElement
+	 * @returns
+	 */
+	const findAndReplaceMarkdownTextWithHtml = (
+		elementsToParse: (string | JSX.Element)[],
+		regexToFind: RegExp,
+		buildReplacementElement: (match: RegExpMatchArray) => JSX.Element | null
+	) => {
+		var parsedElements = [];
+		var startingIndex = -1;
+
+		for (const element of elementsToParse) {
+			if (typeof element === "string") {
+				var matches = element.matchAll(regexToFind);
+
+				for (const match of matches) {
+					if (match && match.index && match.index > 0) {
+						const replacementElement = buildReplacementElement(match);
+
+						// Something might've failed an additional check in the builder function, so
+						// check the return from that first before proceeding.
+						if (
+							replacementElement &&
+							replacementElement !== null &&
+							replacementElement !== undefined
+						) {
+							// Grab all text that came before the break we just found.
+							parsedElements.push(
+								element.substring(startingIndex, match.index)
+							);
+
+							// Add the replacement tag.
+							parsedElements.push(replacementElement);
+
+							// Keep track of where we left off.
+							startingIndex = match.index + match[0].length - 1;
+						}
+					}
+				}
+
+				// Grab whatever text may be leftover before we exit.
+				parsedElements.push(element.substring(startingIndex + 1));
+			} else {
+				// No need to change any previously parsed elements.
+				parsedElements.push(element);
+			}
+		}
+
+		return parsedElements;
+	};
+
+	/**
+	 * Generic helper function that's passed in when parsing markdown and performing replacements for links.
+	 * @param match
+	 * @returns An HTML anchor tag element or null if the match doesn't meet the correct criteria.
+	 */
+	const buildMarkdownLink = (match: RegExpMatchArray) => {
+		if (match.length === 3) {
+			return (
+				<a key={`description-link-${match.index}`} href={match[2]}>
+					{match[1]}
+				</a>
+			);
+		}
+
+		return null;
+	};
+
+	/**
+	 * Generic helper function that's passed in when parsing markdown and performing replacements for line breaks.
+	 * @param match
+	 * @returns An HTML line break element.
+	 */
+	const buildMarkdownLineBreak = (match: RegExpMatchArray) => {
+		// Build the break.
+		return <p />;
+	};
+
+	/**
+	 * Loads the metadata-specified icon according to whichever approach is appropriate for the icon's source.
 	 * @returns
 	 */
 	const buildProjectIcon = () => {
@@ -112,7 +181,7 @@ export default function Project(props: ProjectProps) {
 					</a>
 				)}
 			</div>
-			<div>{parseMarkdownLinks(props.description)}</div>
+			<div>{parseMarkdown(props.description)}</div>
 			<div className={styles.tagsContainer}>{buildTagChips()}</div>
 		</div>
 	);
