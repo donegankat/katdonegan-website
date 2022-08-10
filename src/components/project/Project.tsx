@@ -1,5 +1,4 @@
 import { Chip, Icon } from "@mui/material";
-import { convertToObject, JsxElement } from "typescript";
 import styles from "./Project.module.scss";
 
 interface ProjectProps {
