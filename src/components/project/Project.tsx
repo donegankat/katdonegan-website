@@ -69,9 +69,12 @@ export default function Project(props: ProjectProps) {
 	};
 
 	return (
-		<div>
+		<div
+			key={`project-${props.name.replace(" ", "-")}`}
+			className={styles.project}
+		>
 			<h2 className={styles.projectHeader}>{props.name}</h2>
-			<div>
+			<div className={styles.linksContainer}>
 				{props.liveUrl && (
 					<a href={props.liveUrl} title={`Homepage for ${props.name}`}>
 						See it Live

@@ -1,11 +1,30 @@
-.projectHeader {
-	margin-bottom: 0;
-}
+.project {
+	&:last-child {
+		// Adding additional height to the last element helps avoid scrolling
+		// awkwardness on mobile when the user hits the bottom of the page and
+		// attempts to keep scrolling, which causes their mobile browser header/
+		// address bar to disappear which changes the height of what we have to
+		// work with and it can make scrolling feel awkward and "sticky".
+		margin-bottom: 10vh;
+	}
 
-.tagsContainer {
-	display: flex;
-	flex-wrap: wrap;
-	grid-column-gap: 8px;
-	grid-row-gap: 8px;
-	margin-top: 4px;
+	.projectHeader {
+		border-image: linear-gradient(to right, transparent, hsl(180deg, 100%, 80%) 5%, #2196f3 35%, transparent) 1 0;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+	}
+
+	.linksContainer {
+		margin-bottom: 5px;
+	}
+
+	.tagsContainer {
+		display: flex;
+		flex-wrap: wrap;
+		grid-column-gap: 8px;
+		grid-row-gap: 8px;
+		margin-top: 6px;
+	}
 }
