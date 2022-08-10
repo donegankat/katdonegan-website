@@ -4,7 +4,7 @@ import Menu from "./components/menu/Menu";
 import Projects from "./screens/projects/Projects";
 import React, { ReactNode } from "react";
 import { Screens } from "./constants/Screens";
-import { Fade, Slide } from "@mui/material";
+import { ButtonBase, Fade, Slide } from "@mui/material";
 import Home from "./screens/home/Home";
 
 import styles from "./App.module.scss";
@@ -46,8 +46,7 @@ export default function App() {
 						in={currentScreen === screen}
 						{...{ timeout: 1000 }}
 						style={{
-							position: "relative",
-							zIndex: screen ? screen * 1000 : -10
+							position: "relative"
 						}}
 						unmountOnExit // Improves performance on mobile.
 					>
@@ -61,9 +60,12 @@ export default function App() {
 	return (
 		<>
 			<div className={styles.app}>
-				<div className={styles.logo}>
-					<img src={logo} alt="Kat Donegan" />
-				</div>
+					<ButtonBase
+						className={styles.logo}
+						onClick={() => onScreenChange(Screens.Home)}
+					>
+						<img src={logo} alt="Kat Donegan" />
+					</ButtonBase>
 				{buildScreenTransitioner(Screens.Home, <Home />, "right")}
 				{buildScreenTransitioner(Screens.Projects, <Projects />, "left")}
 				<SocialLinksPanel></SocialLinksPanel>

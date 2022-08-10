@@ -162,7 +162,7 @@
 	"projects": [
 		{
 			"name": "Next.js React Word Guesser Game",
-			"description": "A Wordle-like React Next.js game with a few extra bells and whistles. This game adds features like a hint system and the ability to configure how long you want the word you're guessing to be.<br/>The site is hosted by Netlify, which is integrated with the project's GitHub repository for automatic CICD. Behind the scenes, the game utilizes a Google Firebase DB and external APIs for data loading, storage, and logging. The game was built on the Next.js framework in order to allow for server-side rendering which helps protect sensitive API keys from being exposed publicly when loading data from 3rd party APIs.",
+			"description": "A Wordle-like React Next.js game with a few extra bells and whistles. This game adds features that the real Wordle doesn't currently have such as a hint system and the ability to configure how long you want the word you're guessing to be.<br/>The site is hosted by Netlify, which is integrated with the project's GitHub repository for automatic CICD. Behind the scenes, the game utilizes a Google Firebase DB and external APIs for data loading, storage, and logging. The game was built on the Next.js framework in order to allow for server-side rendering which helps protect sensitive API keys from being exposed publicly when loading data from 3rd party APIs.",
 			"highlights": [],
 			"keywords": [
 				"react",
