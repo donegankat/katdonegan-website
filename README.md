@@ -15,6 +15,10 @@ Much of what you see on the site is pulled from metadata rather than being hardc
 
 Data is pulled from that file and is used to dynamically build sections like the links to my socials and my list of projects.
 
+## CICD
+
+This repository integrates with GitHub Actions to automatically trigger builds and deployments to Firebase on commits to the main branch. See the [firebase-cicd.yml](./.github/workflow/../workflows/firebase-cicd.yml) Actions definition file for specifics.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -44,3 +48,5 @@ The build is minified and the filenames include the hashes.\
 Runs `npm run build` and then deploys it to Firebase hosting.
 
 The live site can be visited at https://katdonegan.com.
+
+**Note**: this command is largely obsolete now that CICD has been set up with GitHub Actions.

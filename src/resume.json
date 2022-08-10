@@ -215,9 +215,9 @@
 		},
 		{
 			"name": "Personal Website",
-			"description": "You're here right now! This site was built using React and Material UI and is hosted on Google Firebase. This site pulls data dynamically from a file that (mostly) follows the [JSON Resume spec](https://jsonresume.org/), with a few exceptions where I needed additional attributes beyond what the spec supported. That data is used to build much of the content on the site on the fly, including the links to my socials and even this project list.",
+			"description": "You're here right now! This site was built using React and Material UI and is hosted on Google Firebase. This site pulls data dynamically from a file that (mostly) follows the [JSON Resume spec](https://jsonresume.org/), with a few exceptions where I needed additional attributes beyond what the spec supported. That data is used to build much of the content on the site on the fly, including the links to my socials and even this project list.<br />The repository for this site utilizes GitHub Actions to automatically trigger CICD builds and deployments to Firebase on commits.",
 			"highlights": [""],
-			"keywords": ["react", "typescript", "firebase", "scss", "material ui"],
+			"keywords": ["react", "typescript", "firebase", "scss", "material ui", "github actions", "cicd"],
 			"startDate": "2022-08-01",
 			"type": "application",
 			"url": "https://github.com/donegankat/katdonegan-website",
