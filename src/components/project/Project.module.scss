@@ -1,4 +1,8 @@
 .project {
+	&:not(:first-child) {
+		margin-top: 3rem;
+	}
+
 	&:last-child {
 		// Adding additional height to the last element helps avoid scrolling
 		// awkwardness on mobile when the user hits the bottom of the page and
@@ -14,6 +18,17 @@
 		border-bottom-width: 1px;
 		margin-bottom: 5px;
 		padding-bottom: 5px;
+
+		.projectIcon {
+			color: #009688;
+			margin-right: 5px;
+	
+			&.imgIcon {
+				img {
+					width: inherit;
+				}
+			}
+		}
 	}
 
 	.linksContainer {

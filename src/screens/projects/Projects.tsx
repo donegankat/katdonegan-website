@@ -10,12 +10,14 @@ export default function Projects() {
 	for (var i = 0; i < projects.length; i++) {
 		projectsElements.push(
 			<Project
-				key={projects[i].name}
+				key={projects[i]._identifier}
 				name={projects[i].name}
 				description={projects[i].description}
 				repositoryUrl={projects[i].url}
 				liveUrl={projects[i]._liveUrl}
 				tags={projects[i].keywords}
+				icon={projects[i]._icon.class}
+				iconSource={projects[i]._icon.source}
 			/>
 		);
 	}
