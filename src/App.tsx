@@ -60,12 +60,12 @@ export default function App() {
 	return (
 		<>
 			<div className={styles.app}>
-					<ButtonBase
-						className={styles.logo}
-						onClick={() => onScreenChange(Screens.Home)}
-					>
-						<img src={logo} alt="Kat Donegan" />
-					</ButtonBase>
+				<ButtonBase
+					className={styles.logo}
+					onClick={() => onScreenChange(Screens.Home)}
+				>
+					<img src={logo} alt="Kat Donegan" />
+				</ButtonBase>
 				{buildScreenTransitioner(Screens.Home, <Home />, "right")}
 				{buildScreenTransitioner(Screens.Projects, <Projects />, "left")}
 				<SocialLinksPanel></SocialLinksPanel>

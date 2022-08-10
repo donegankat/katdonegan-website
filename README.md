@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./public/logo192.png" alt="React & Material UI Personal Website"/>
+    <img src="./public/project-icons/personal-site-logo.png" alt="React & Material UI Personal Website" width="300"/>
     <h1 align="center">
         React & Material UI Personal Website
     </h1>
