@@ -84,15 +84,15 @@
 		},
 		{
 			"name": "Base64 File Converter",
-			"description": "A .NET Core 3.1 Windows Forms application for converting files to Base64 strings (both decompressed and deflated/compressed) and converting Base64 strings (both decompressed and deflated/compressed) to files.",
+			"description": "A .NET Core 3.1 Windows Forms application for converting files to Base64 strings (both decompressed and Deflated/compressed) and converting Base64 strings (both decompressed and Deflated/compressed) to files.<br/>This was originally developed to make my team's life easier when developing and testing an API which required heavy use of Base64 file bytes and compression and decompression using the Deflate algorithm.",
 			"highlights": [""],
 			"keywords": ["dotnet", "csharp", "windows forms"],
 			"startDate": "2021-10-01",
 			"type": "application",
 			"url": "https://github.com/donegankat/Base64FileConverter",
 			"_icon": {
-				"class": "track_changes",
-				"source": "mdi"
+				"class": "fa-solid fa-file-code",
+				"source": "fontawesome"
 			},
 			"_identifier": "base64-converter"
 		},
