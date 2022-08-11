@@ -1,4 +1,5 @@
-import { Icon, IconButton, Link, styled, Tooltip, tooltipClasses, TooltipProps } from "@mui/material";
+import { ButtonProps, Icon, IconButton, Link, styled, Tooltip, tooltipClasses, TooltipProps, Zoom } from "@mui/material";
+import { blue } from "@mui/material/colors";
 
 import styles from "./SocialLinkButton.module.scss";
 
@@ -11,12 +12,28 @@ interface SocialLinkButtonProps {
 }
 
 export default function SocialLinkButton(props: SocialLinkButtonProps) {
+	/**
+	 * Custom styled version of the Material UI Tooltip.
+	 */
 	const SocialTooltip = styled(({ className, ...props }: TooltipProps) => (
-		<Tooltip {...props} classes={{ popper: className }} />
+		<Tooltip
+			{...props}
+			classes={{ popper: className }}
+			TransitionComponent={Zoom}
+		/>
 	))(({ theme }) => ({
 		[`& .${tooltipClasses.tooltip}`]: {
-			backgroundColor: "#1e88e5ba",
+			backgroundColor: blue[600],
 			boxShadow: theme.shadows[1]
+		}
+	}));
+
+	/**
+	 * Custom styled version of the Material UI IconButton.
+	 */
+	const SocialButton = styled(IconButton)<ButtonProps>(({ theme }) => ({
+		"&:hover": {
+			backgroundColor: blue[600]
 		}
 	}));
 
@@ -26,7 +43,7 @@ export default function SocialLinkButton(props: SocialLinkButtonProps) {
 				title={`${props.networkName}: ${props.userName}`}
 				placement="left"
 			>
-				<IconButton
+				<SocialButton
 					aria-label={props.networkName}
 					className={styles.socialButton}
 				>
@@ -35,7 +52,7 @@ export default function SocialLinkButton(props: SocialLinkButtonProps) {
 					) : (
 						<Icon className={props.icon}></Icon>
 					)}
-				</IconButton>
+				</SocialButton>
 			</SocialTooltip>
 		</Link>
 	);

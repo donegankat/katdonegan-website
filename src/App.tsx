@@ -11,20 +11,37 @@ import styles from "./App.module.scss";
 
 export default function App() {
 	const [currentScreen, setCurrentScreen] = React.useState(Screens.Home);
+	const [previousScreen, setPreviousScreen] = React.useState(Screens.Home);
 
 	const onScreenChange = (selectedScreen: number) => {
+		setPreviousScreen(currentScreen);
 		setCurrentScreen(selectedScreen);
+	}
+
+	const determineScreenSlideInDirection = (screenToDetermine: number) => {
+		const screensValues = Object.values(Screens);
+
+		// Always enter and exit from the correct side for the 1st and last screens, but any screens in-between
+		// should enter and exit according to whichever direction the incoming screen is coming from.
+		if (screenToDetermine === screensValues[0]) {
+			return "right";
+		} else if (screenToDetermine === screensValues[screensValues.length]) {
+			return "left";
+		} else if (previousScreen < currentScreen) {
+			// This logic looks like it can be combined with the statement below, but just don't. Seriously.
+			return previousScreen < screenToDetermine ? "left" : "right";
+		}
+		return previousScreen > screenToDetermine ? "right" : "left";
 	}
 
 	const buildScreenTransitioner = (
 		screen: number,
-		component: ReactNode,
-		direction: "up" | "down" | "right" | "left"
+		component: ReactNode
 	) => {
 		return (
 			<Slide
 				in={currentScreen === screen}
-				direction={direction}
+				direction={determineScreenSlideInDirection(screen)}
 				{...{
 					timeout: {
 						enter: 1000,
@@ -66,8 +83,8 @@ export default function App() {
 				>
 					<img src={logo} alt="Kat Donegan" />
 				</ButtonBase>
-				{buildScreenTransitioner(Screens.Home, <Home />, "right")}
-				{buildScreenTransitioner(Screens.Projects, <Projects />, "left")}
+				{buildScreenTransitioner(Screens.Home, <Home />)}
+				{buildScreenTransitioner(Screens.Projects, <Projects />)}
 				<SocialLinksPanel></SocialLinksPanel>
 			</div>
 			<Menu
