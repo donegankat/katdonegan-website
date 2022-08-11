@@ -7,7 +7,7 @@
 		"email": "donegankat@gmail.com",
 		"phone": "(303) 588-9482",
 		"url": "https://katdonegan.com",
-		"summary": "",
+		"summary": "Software Engineer & Team Lead<br/>from Denver, Colorado",
 		"location": {
 			"countryCode": "US",
 			"region": "Colorado"
@@ -42,6 +42,83 @@
 			}
 		]
 	},
+	"projects": [
+		{
+			"name": "Next.js React Word Guesser Game",
+			"description": "A Wordle-like React Next.js game with a few extra bells and whistles. This game adds features that the real Wordle doesn't currently have such as a hint system and the ability to configure how long you want the word you're guessing to be.<br/>The site is hosted by Netlify, which is integrated with the project's GitHub repository for automatic CICD. Behind the scenes, the game utilizes a Google Firebase DB and external APIs for data loading, storage, and logging. The game was built on the Next.js framework in order to allow for server-side rendering which helps protect sensitive API keys from being exposed publicly when loading data from 3rd party APIs.",
+			"highlights": [],
+			"keywords": [
+				"react",
+				"next.js",
+				"typescript",
+				"firebase",
+				"firestore",
+				"api",
+				"scss",
+				"bootstrap",
+				"cicd"
+			],
+			"startDate": "2022-07-01",
+			"type": "application",
+			"url": "https://github.com/donegankat/word-guesser",
+			"_liveUrl": "https://wordguesser.net",
+			"_icon": {
+				"class": "./project-icons/word-guesser-logo.png",
+				"source": "img"
+			},
+			"_identifier": "word-guesser"
+		},
+		{
+			"name": "Slack API Bot",
+			"description": "A .NET 6 console application used to integrate with the Slack API and perform tasks like posting automatic announcements. This tool can integrate with Azure DevOps pipelines for builds, unit tests, and scheduled executions.<br/>This concept was originally developed as a company-wide communication and productivity tool, and was built in order to announce newly created channels to the company each week so that as the team continued to grow, we had better visibility into what was happening across the company.",
+			"highlights": [""],
+			"keywords": ["dotnet", "csharp", "api", "slack", "azure devops"],
+			"startDate": "2022-07-01",
+			"type": "application",
+			"url": "https://github.com/donegankat/SlackApiBot",
+			"_icon": {
+				"class": "./project-icons/slack-logo.png",
+				"source": "img"
+			},
+			"_identifier": "slack-api"
+		},
+		{
+			"name": "Base64 File Converter",
+			"description": "A .NET Core 3.1 Windows Forms application for converting files to Base64 strings (both decompressed and deflated/compressed) and converting Base64 strings (both decompressed and deflated/compressed) to files.",
+			"highlights": [""],
+			"keywords": ["dotnet", "csharp", "windows forms"],
+			"startDate": "2021-10-01",
+			"type": "application",
+			"url": "https://github.com/donegankat/Base64FileConverter",
+			"_icon": {
+				"class": "track_changes",
+				"source": "mdi"
+			},
+			"_identifier": "base64-converter"
+		},
+		{
+			"name": "Personal Website",
+			"description": "You're here right now! This site was built using React and Material UI and is hosted on Google Firebase. This site pulls data dynamically from a file that (mostly) follows the [JSON Resume spec](https://jsonresume.org/), with a few exceptions where I needed additional attributes beyond what the spec supported. That data is used to build much of the content on the site on the fly, including the links to my socials and even this project list.<br />The repository for this site utilizes GitHub Actions to automatically trigger CICD builds and deployments to Firebase on commits.",
+			"highlights": [""],
+			"keywords": [
+				"react",
+				"typescript",
+				"firebase",
+				"scss",
+				"material ui",
+				"github actions",
+				"cicd"
+			],
+			"startDate": "2022-08-01",
+			"type": "application",
+			"url": "https://github.com/donegankat/katdonegan-website",
+			"_icon": {
+				"class": "./project-icons/personal-site-logo.png",
+				"source": "img"
+			},
+			"_identifier": "personal-website"
+		}
+	],
 	"work": [
 		{
 			"name": "Equus Software",
@@ -157,75 +234,6 @@
 			"name": "Scrum Master Certified (SMC)",
 			"date": "2020-02-01",
 			"issuer": "Scrum Alliance"
-		}
-	],
-	"projects": [
-		{
-			"name": "Next.js React Word Guesser Game",
-			"description": "A Wordle-like React Next.js game with a few extra bells and whistles. This game adds features that the real Wordle doesn't currently have such as a hint system and the ability to configure how long you want the word you're guessing to be.<br/>The site is hosted by Netlify, which is integrated with the project's GitHub repository for automatic CICD. Behind the scenes, the game utilizes a Google Firebase DB and external APIs for data loading, storage, and logging. The game was built on the Next.js framework in order to allow for server-side rendering which helps protect sensitive API keys from being exposed publicly when loading data from 3rd party APIs.",
-			"highlights": [],
-			"keywords": [
-				"react",
-				"next.js",
-				"typescript",
-				"firebase",
-				"firestore",
-				"api",
-				"scss",
-				"bootstrap",
-				"cicd"
-			],
-			"startDate": "2022-07-01",
-			"type": "application",
-			"url": "https://github.com/donegankat/word-guesser",
-			"_liveUrl": "https://wordguesser.net",
-			"_icon": {
-				"class": "./project-icons/word-guesser-logo.png",
-				"source": "img"
-			},
-			"_identifier": "word-guesser"
-		},
-		{
-			"name": "Slack API Bot",
-			"description": "A .NET 6 console application used to integrate with the Slack API and perform tasks like posting automatic announcements. This tool can integrate with Azure DevOps pipelines for builds, unit tests, and scheduled executions.<br/>This concept was originally developed as a company-wide communication and productivity tool, and was built in order to announce newly created channels to the company each week so that as the team continued to grow, we had better visibility into what was happening across the company.",
-			"highlights": [""],
-			"keywords": ["dotnet", "csharp", "api", "slack", "azure devops"],
-			"startDate": "2022-07-01",
-			"type": "application",
-			"url": "https://github.com/donegankat/SlackApiBot",
-			"_icon": {
-				"class": "./project-icons/slack-logo.png",
-				"source": "img"
-			},
-			"_identifier": "slack-api"
-		},
-		{
-			"name": "Base64 File Converter",
-			"description": "A .NET Core 3.1 Windows Forms application for converting files to Base64 strings (both decompressed and deflated/compressed) and converting Base64 strings (both decompressed and deflated/compressed) to files.",
-			"highlights": [""],
-			"keywords": ["dotnet", "csharp", "windows forms"],
-			"startDate": "2021-10-01",
-			"type": "application",
-			"url": "https://github.com/donegankat/Base64FileConverter",
-			"_icon": {
-				"class": "track_changes",
-				"source": "mdi"
-			},
-			"_identifier": "base64-converter"
-		},
-		{
-			"name": "Personal Website",
-			"description": "You're here right now! This site was built using React and Material UI and is hosted on Google Firebase. This site pulls data dynamically from a file that (mostly) follows the [JSON Resume spec](https://jsonresume.org/), with a few exceptions where I needed additional attributes beyond what the spec supported. That data is used to build much of the content on the site on the fly, including the links to my socials and even this project list.<br />The repository for this site utilizes GitHub Actions to automatically trigger CICD builds and deployments to Firebase on commits.",
-			"highlights": [""],
-			"keywords": ["react", "typescript", "firebase", "scss", "material ui", "github actions", "cicd"],
-			"startDate": "2022-08-01",
-			"type": "application",
-			"url": "https://github.com/donegankat/katdonegan-website",
-			"_icon": {
-				"class": "./project-icons/personal-site-logo.png",
-				"source": "img"
-			},
-			"_identifier": "personal-website"
 		}
 	],
 	"meta": {

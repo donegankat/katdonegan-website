@@ -1,3 +1,6 @@
+import resume from "../../resume.json";
+import transformMarkdownStringToJsx from "../../utilities/markdownToJsx";
+
 import styles from "./Home.module.scss";
 
 export default function Home() {
@@ -6,9 +9,7 @@ export default function Home() {
 			<div>
 				Hi, I'm Kat
 				<div className={styles.subHeader}>
-					Software Engineer &amp; Team Lead
-					<br />
-					from Denver, Colorado
+					{transformMarkdownStringToJsx(resume.basics.summary)}
 				</div>
 			</div>
 		</header>
