@@ -54,9 +54,11 @@
 				"firebase",
 				"firestore",
 				"api",
+				"html",
 				"scss",
 				"bootstrap",
-				"cicd"
+				"cicd",
+				"netlify"
 			],
 			"startDate": "2022-07-01",
 			"type": "application",
@@ -72,7 +74,7 @@
 			"name": "Slack API Bot",
 			"description": "A .NET 6 console application used to integrate with the Slack API and perform tasks like posting automatic announcements. This tool can integrate with Azure DevOps pipelines for builds, unit tests, and scheduled executions.<br/>This concept was originally developed as a company-wide communication and productivity tool, and was built in order to announce newly created channels to the company each week so that as the team continued to grow, we had better visibility into what was happening across the company.",
 			"highlights": [""],
-			"keywords": ["dotnet", "csharp", "api", "slack", "azure devops"],
+			"keywords": ["dotnet", "csharp", "api", "slack", "azure devops", "cicd"],
 			"startDate": "2022-07-01",
 			"type": "application",
 			"url": "https://github.com/donegankat/SlackApiBot",
@@ -104,10 +106,12 @@
 				"react",
 				"typescript",
 				"firebase",
+				"html",
 				"scss",
 				"material ui",
 				"github actions",
-				"cicd"
+				"cicd",
+				"json"
 			],
 			"startDate": "2022-08-01",
 			"type": "application",
