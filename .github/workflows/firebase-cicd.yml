@@ -16,12 +16,13 @@ jobs:
 
     steps:
       # Checks-out the repository under $GITHUB_WORKSPACE so the job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Build
         run: |
           npm install
           npm run build
       - name: Firebase Deploy
-        run: |
-          sudo npm install -g firebase-tools
-          firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+          channelId: live
