@@ -40,15 +40,16 @@ const findAndReplaceMarkdownTextWithHtml = (
 	regexToFind: RegExp,
 	buildReplacementElement: (match: RegExpMatchArray) => JSX.Element | null
 ) => {
-	var parsedElements = [];
-	var startingIndex = -1;
+	const parsedElements = [];
+	let startingIndex = 0;
 
 	for (const element of elementsToParse) {
 		if (typeof element === "string") {
-			var matches = element.matchAll(regexToFind);
+			startingIndex = 0;
+			let matches = element.matchAll(regexToFind);
 
 			for (const match of matches) {
-				if (match && match.index && match.index > 0) {
+				if (match?.index && match.index > 0) {
 					const replacementElement = buildReplacementElement(match);
 
 					// Something might've failed an additional check in the builder function, so
@@ -67,13 +68,13 @@ const findAndReplaceMarkdownTextWithHtml = (
 						parsedElements.push(replacementElement);
 
 						// Keep track of where we left off.
-						startingIndex = match.index + match[0].length - 1;
+						startingIndex = match.index + match[0].length;
 					}
 				}
 			}
 
 			// Grab whatever text may be leftover before we exit.
-			parsedElements.push(element.substring(startingIndex + 1));
+			parsedElements.push(element.substring(startingIndex));
 		} else {
 			// No need to change any previously parsed elements.
 			parsedElements.push(element);
@@ -107,5 +108,5 @@ const buildMarkdownLink = (match: RegExpMatchArray) => {
  */
 const buildMarkdownLineBreak = (match: RegExpMatchArray) => {
 	// Build the break.
-	return <br key={`break-${match.index}`} />;
+	return <><br key={`break-${match.index}`} /><br key={`break2-${match.index}`} /></>;
 };

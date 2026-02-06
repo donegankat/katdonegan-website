@@ -44,6 +44,44 @@
 	},
 	"projects": [
 		{
+			"name": "Chronicle",
+			"description": "A full-stack note-taking application purpose-built for tabletop RPG campaign management. Features a rich text editor (TipTap) with full formatting support, image uploads with secure signed-URL storage, drag-and-drop sidebar navigation, and cross-page search.<br/>Integrates with Claude AI and OpenAI via Supabase Edge Functions to automatically summarize past sessions and extract an intelligent glossary of characters, locations, factions, and relationships from session notes, complete with confidence scoring, status detection, and source traceability. Users can request on-demand glossary extraction and summarization, or rely on the background intelligence layer which automatically identifies stale data and processes ongoing updates as things change so that Chronicle's analysis grows and adapts with the campaign.<br/>Supports multi-format import from OneNote (HTML/MHT), Markdown, and DOCX with HTML sanitization and XSS protection.<br/>All data is stored in a Supabase PostgreSQL database secured with Row-Level Security and auto-saved with debounced persistence.<br/>Hosted on Cloudflare Pages with automatic CICD from GitHub for the site and GitHub Actions CICD for the Supabase Edge Functions.",
+			"highlights": [],
+			"keywords": [
+				"react",
+				"typescript",
+				"supabase",
+				"ai",
+				"claude",
+				"openai",
+				"edge functions",
+				"tailwind css",
+				"postgresql",
+				"cicd",
+				"cloudflare"
+			],
+			"startDate": "2026-01-20",
+			"type": "application",
+			"_icon": {
+				"class": "./project-icons/chronicle-logo.png",
+				"source": "img"
+			},
+			"_identifier": "chronicle"
+		},
+		{
+			"name": "Jira Monte Carlo Metrics Tool",
+			"description": "A .NET console application which integrates with the Jira API to pull historical issue data and perform Monte Carlo simulations to predict future completion dates for epics and projects based on that historical data, and flag when teams were at risk of meeting deadlines and committments. The tool updates a shared dashboard with an at-a-glance status for each team, and produces a detailed Excel workbook with all of the simulation data, in depth details of each story, and various breakdowns of each previous release.<br/>This tool was built to help teams at my company better understand our velocity and work patterns in order to make more informed decisions around project timelines and resource allocation.<br/>Additionally, the tool also performs in-depth analysis of the historical data and generates a variety of metrics and visualizations to help identify trends and areas for improvement in our development process. This includes things like average time spent in each status, kickbacks, blocks, and other insights that help optimize workflow, identify trends, and improve overall efficiency.",
+			"highlights": [],
+			"keywords": ["dotnet", "csharp", "api", "jira", "metrics", "monte carlo", "excel", "dashboard", "agile"],
+			"startDate": "2019-01-01",
+			"type": "application",
+			"_icon": {
+				"class": "./project-icons/jira-logo.png",
+				"source": "img"
+			},
+			"_identifier": "jira-metrics"
+		},
+		{
 			"name": "Next.js React Word Guesser Game",
 			"description": "A Wordle-like React Next.js game with a few extra bells and whistles. This game adds features that the real Wordle doesn't currently have such as a hint system and the ability to configure how long you want the word you're guessing to be.<br/>The site is hosted by Netlify, which is integrated with the project's GitHub repository for automatic CICD. Behind the scenes, the game utilizes a Google Firebase DB and external APIs for data loading, storage, and logging. The game was built on the Next.js framework in order to allow for server-side rendering which helps protect sensitive API keys from being exposed publicly when loading data from 3rd party APIs.",
 			"highlights": [],
@@ -123,89 +161,7 @@
 			"_identifier": "personal-website"
 		}
 	],
-	"work": [
-		{
-			"name": "Equus Software",
-			"position": "Software Engineer Team Lead",
-			"startDate": "2019-09-30",
-			"endDate": "",
-			"highlights": [
-				"Designed and built a modern REST API following industry standard best practices which is used by 3rd party data providers and for client integrations with our main application.",
-				"Established CICD in Azure DevOps, including build, release, unit testing, and other automated pipelines."
-			],
-			"summary": "Team lead for an agile software development team consisting of myself, 3 other developers, a QA, and business analyst. Daily responsibilities include developing features and bug fixes for a major SaaS application, refining upcoming work and clarifying requirements, interfacing with other teams and departments to find solutions and answers, providing input on and acting as a SME for a variety of subjects, and maintaining and overseeing Azure DevOps pipelines, agents, tasks, and servers.",
-			"url": "https://equusoft.com",
-			"location": "Denver, Colorado, United States"
-		},
-		{
-			"name": "Equus Software",
-			"position": "Software Engineer",
-			"startDate": "2018-10-23",
-			"endDate": "",
-			"highlights": [],
-			"url": "https://equusoft.com",
-			"location": "Denver, Colorado"
-		},
-		{
-			"name": "Agile Education Marketing",
-			"position": "Senior Software Engineer & Systems Analyst",
-			"startDate": "2017-08-31",
-			"endDate": "2018-10-31",
-			"highlights": [
-				"Created data management SaaS application used to support primary company database using ASP.NET MVC and Entity Framework.",
-				"Performed complete redesign and overhaul of legacy customer-facing email analytics and reporting web application.",
-				"Lead engineer and designer for the creation of an automated data collection software that is responsible for gathering, parsing, and synthesizing over 2 TB of data.",
-				"Created robust, flexible, and responsive web application which allows for the quick and intuitive compilation, search, and consumption of education data.",
-				"Oversaw development of a marketing automation system responsible for sending and processing results for 300k marketing emails daily using .NET Core 2 API and Angular 4.",
-				"Modernized legacy applications allowing for unit and acceptance level testing, as well as implemented CI/CD pipelines."
-			],
-			"summary": "As the lead full stack software engineer, I was responsible for all critical systems, services, and websites for the entire company. It was also my responsibility to plan and architect new systems, maintain the company servers, setup and oversee the company’s databases, and train and oversee junior developers.",
-			"url": "https://agile-ed.com/",
-			"location": "Denver, Colorado, United States"
-		},
-		{
-			"name": "Agile Education Marketing",
-			"position": "Software Engineer & Systems Analyst",
-			"startDate": "2014-08-31",
-			"endDate": "2017-08-31",
-			"highlights": [],
-			"url": "https://agile-ed.com/",
-			"location": "Denver, Colorado, United States"
-		},
-		{
-			"name": "Agile Education Marketing",
-			"position": "Software Engineer",
-			"startDate": "2014-03-31",
-			"endDate": "2014-08-31",
-			"highlights": [],
-			"url": "https://agile-ed.com/",
-			"location": "Denver, Colorado, United States"
-		},
-		{
-			"name": "21-6 Productions",
-			"position": "Software Development Intern",
-			"startDate": "2012-07-31",
-			"endDate": "2012-09-30",
-			"highlights": [
-				"Programmed in Actionscript using Adobe Flash Builder 4.6.",
-				"Worked on database and SVN management and organization of game assets.",
-				"Vectorized and animated assets in Adobe Flash CS6."
-			],
-			"summary": "Worked on the Facebook game Rock Star Rising.",
-			"url": "https://www.21-6.com/",
-			"location": "Greenwood Village, CO"
-		},
-		{
-			"name": "J.W. Kim's Tae Kwon Do",
-			"position": "Instructor",
-			"startDate": "2004-12-31",
-			"endDate": "2007-12-31",
-			"highlights": [],
-			"summary": "High Brown Belt, class leader, instructor, and mentor to younger students",
-			"url": "https://www.jwkimtkd.com/",
-			"location": "Castle Rock, CO"
-		}
-	],
+	"work": [ ],
 	"education": [
 		{
 			"institution": "University of Denver",
