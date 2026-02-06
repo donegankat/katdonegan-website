@@ -10,8 +10,8 @@ import Home from "./screens/home/Home";
 import styles from "./App.module.scss";
 
 export default function App() {
-	const [currentScreen, setCurrentScreen] = React.useState(Screens.Home);
-	const [previousScreen, setPreviousScreen] = React.useState(Screens.Home);
+	const [currentScreen, setCurrentScreen] = React.useState<number>(Screens.Home);
+	const [previousScreen, setPreviousScreen] = React.useState<number>(Screens.Home);
 
 	const onScreenChange = (selectedScreen: number) => {
 		setPreviousScreen(currentScreen);

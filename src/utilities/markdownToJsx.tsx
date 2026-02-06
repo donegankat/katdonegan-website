@@ -1,3 +1,5 @@
+import { JSX } from "react";
+
 /**
  * Parses the text provided, replaces any recognized markdown elements with HTML/JSX elements, and
  * returns an array representing the original text alongside the newly inserted JSX elements where
