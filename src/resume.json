@@ -2,12 +2,12 @@
 	"$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
 	"basics": {
 		"name": "Kat Donegan",
-		"label": "Software Engineer",
+		"label": "Technical Team Leader & Senior Software Engineer",
 		"image": "",
 		"email": "donegankat@gmail.com",
 		"phone": "(303) 588-9482",
 		"url": "https://katdonegan.com",
-		"summary": "Software Engineer & Team Lead<br/>from Denver, Colorado",
+		"summary": "Software Engineer & Team Lead",
 		"location": {
 			"countryCode": "US",
 			"region": "Colorado"
@@ -45,7 +45,7 @@
 	"projects": [
 		{
 			"name": "Chronicle",
-			"description": "A full-stack note-taking application purpose-built for tabletop RPG campaign management. Features a rich text editor (TipTap) with full formatting support, image uploads with secure signed-URL storage, drag-and-drop sidebar navigation, and cross-page search.<br/>Integrates with Claude AI and OpenAI via Supabase Edge Functions to automatically summarize past sessions and extract an intelligent glossary of characters, locations, factions, and relationships from session notes, complete with confidence scoring, status detection, and source traceability. Users can request on-demand glossary extraction and summarization, or rely on the background intelligence layer which automatically identifies stale data and processes ongoing updates as things change so that Chronicle's analysis grows and adapts with the campaign.<br/>Supports multi-format import from OneNote (HTML/MHT), Markdown, and DOCX with HTML sanitization and XSS protection.<br/>All data is stored in a Supabase PostgreSQL database secured with Row-Level Security and auto-saved with debounced persistence.<br/>Hosted on Cloudflare Pages with automatic CICD from GitHub for the site and GitHub Actions CICD for the Supabase Edge Functions.",
+			"description": "A full-stack note-taking application purpose-built for tabletop RPG campaign management. Features a rich text editor (TipTap) with full formatting support, image uploads with secure signed-URL storage, drag-and-drop sidebar navigation, and cross-page search.<br/><br/>Integrates with Claude AI and OpenAI via Supabase Edge Functions to automatically summarize past sessions and extract an intelligent glossary of characters, locations, factions, and relationships from session notes, complete with confidence scoring, status detection, and source traceability. Users can request on-demand glossary extraction and summarization, or rely on the background intelligence layer which automatically identifies stale data and processes ongoing updates as things change so that Chronicle's analysis grows and adapts with the campaign.<br/><br/>Supports multi-format import from OneNote (HTML/MHT), Markdown, and DOCX with HTML sanitization and XSS protection.<br/><br/>All data is stored in a Supabase PostgreSQL database secured with Row-Level Security and auto-saved with debounced persistence.<br/><br/>Hosted on Cloudflare Pages with automatic CICD from GitHub for the site and GitHub Actions CICD for the Supabase Edge Functions.",
 			"highlights": [],
 			"keywords": [
 				"react",
@@ -70,7 +70,7 @@
 		},
 		{
 			"name": "Jira Monte Carlo Metrics Tool",
-			"description": "A .NET console application which integrates with the Jira API to pull historical issue data and perform Monte Carlo simulations to predict future completion dates for epics and projects based on that historical data, and flag when teams were at risk of meeting deadlines and committments. The tool updates a shared dashboard with an at-a-glance status for each team, and produces a detailed Excel workbook with all of the simulation data, in depth details of each story, and various breakdowns of each previous release.<br/>This tool was built to help teams at my company better understand our velocity and work patterns in order to make more informed decisions around project timelines and resource allocation.<br/>Additionally, the tool also performs in-depth analysis of the historical data and generates a variety of metrics and visualizations to help identify trends and areas for improvement in our development process. This includes things like average time spent in each status, kickbacks, blocks, and other insights that help optimize workflow, identify trends, and improve overall efficiency.",
+			"description": "A .NET console application which integrates with the Jira API to pull historical issue data and perform Monte Carlo simulations to predict future completion dates for epics and projects based on that historical data, and flag when teams were at risk of meeting deadlines and committments. The tool updates a shared dashboard with an at-a-glance status for each team, and produces a detailed Excel workbook with all of the simulation data, in depth details of each story, and various breakdowns of each previous release.<br/><br/>This tool was built to help teams at my company better understand our velocity and work patterns in order to make more informed decisions around project timelines and resource allocation.<br/><br/>Additionally, the tool also performs in-depth analysis of the historical data and generates a variety of metrics and visualizations to help identify trends and areas for improvement in our development process. This includes things like average time spent in each status, kickbacks, blocks, and other insights that help optimize workflow, identify trends, and improve overall efficiency.",
 			"highlights": [],
 			"keywords": ["dotnet", "csharp", "api", "jira", "metrics", "monte carlo", "excel", "dashboard", "agile"],
 			"startDate": "2019-01-01",
@@ -83,7 +83,7 @@
 		},
 		{
 			"name": "Next.js React Word Guesser Game",
-			"description": "A Wordle-like React Next.js game with a few extra bells and whistles. This game adds features that the real Wordle doesn't currently have such as a hint system and the ability to configure how long you want the word you're guessing to be.<br/>The site is hosted by Netlify, which is integrated with the project's GitHub repository for automatic CICD. Behind the scenes, the game utilizes a Google Firebase DB and external APIs for data loading, storage, and logging. The game was built on the Next.js framework in order to allow for server-side rendering which helps protect sensitive API keys from being exposed publicly when loading data from 3rd party APIs.",
+			"description": "A Wordle-like React Next.js game with a few extra bells and whistles. This game adds features that the real Wordle doesn't currently have such as a hint system and the ability to configure how long you want the word you're guessing to be.<br/><br/>The site is hosted by Netlify, which is integrated with the project's GitHub repository for automatic CICD. Behind the scenes, the game utilizes a Google Firebase DB and external APIs for data loading, storage, and logging. The game was built on the Next.js framework in order to allow for server-side rendering which helps protect sensitive API keys from being exposed publicly when loading data from 3rd party APIs.",
 			"highlights": [],
 			"keywords": [
 				"react",
@@ -110,7 +110,7 @@
 		},
 		{
 			"name": "Slack API Bot",
-			"description": "A .NET 6 console application used to integrate with the Slack API and perform tasks like posting automatic announcements. This tool can integrate with Azure DevOps pipelines for builds, unit tests, and scheduled executions.<br/>This concept was originally developed as a company-wide communication and productivity tool, and was built in order to announce newly created channels to the company each week so that as the team continued to grow, we had better visibility into what was happening across the company.",
+			"description": "A .NET 6 console application used to integrate with the Slack API and perform tasks like posting automatic announcements. This tool can integrate with Azure DevOps pipelines for builds, unit tests, and scheduled executions.<br/><br/>This concept was originally developed as a company-wide communication and productivity tool, and was built in order to announce newly created channels to the company each week so that as the team continued to grow, we had better visibility into what was happening across the company.",
 			"highlights": [""],
 			"keywords": ["dotnet", "csharp", "api", "slack", "azure devops", "cicd"],
 			"startDate": "2022-07-01",
@@ -124,7 +124,7 @@
 		},
 		{
 			"name": "Base64 File Converter",
-			"description": "A .NET Core 3.1 Windows Forms application for converting files to Base64 strings (both decompressed and Deflated/compressed) and converting Base64 strings (both decompressed and Deflated/compressed) to files.<br/>This was originally developed to make my team's life easier when developing and testing an API which required heavy use of Base64 file bytes and compression and decompression using the Deflate algorithm.",
+			"description": "A .NET Core 3.1 Windows Forms application for converting files to Base64 strings (both decompressed and Deflated/compressed) and converting Base64 strings (both decompressed and Deflated/compressed) to files.<br/><br/>This was originally developed to make my team's life easier when developing and testing an API which required heavy use of Base64 file bytes and compression and decompression using the Deflate algorithm.",
 			"highlights": [""],
 			"keywords": ["dotnet", "csharp", "windows forms"],
 			"startDate": "2021-10-01",
@@ -138,7 +138,7 @@
 		},
 		{
 			"name": "Personal Website",
-			"description": "You're here right now! This site was built using React and Material UI and is hosted on Google Firebase. This site pulls data dynamically from a file that (mostly) follows the [JSON Resume spec](https://jsonresume.org/), with a few exceptions where I needed additional attributes beyond what the spec supported. That data is used to build much of the content on the site on the fly, including the links to my socials and even this project list.<br />The repository for this site utilizes GitHub Actions to automatically trigger CICD builds and deployments to Firebase on commits.",
+			"description": "You're here right now! This site was built using React and Material UI and is hosted on Google Firebase. This site pulls data dynamically from a file that (mostly) follows the [JSON Resume spec](https://jsonresume.org/), with a few exceptions where I needed additional attributes beyond what the spec supported. That data is used to build much of the content on the site on the fly, including the links to my socials and even this project list.<br/><br/>The repository for this site utilizes GitHub Actions to automatically trigger CICD builds and deployments to Firebase on commits.",
 			"highlights": [""],
 			"keywords": [
 				"react",

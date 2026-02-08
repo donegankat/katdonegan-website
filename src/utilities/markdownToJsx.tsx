@@ -110,5 +110,5 @@ const buildMarkdownLink = (match: RegExpMatchArray) => {
  */
 const buildMarkdownLineBreak = (match: RegExpMatchArray) => {
 	// Build the break.
-	return <><br key={`break-${match.index}`} /><br key={`break2-${match.index}`} /></>;
+	return <br key={`break-${match.index}`} />;
 };
