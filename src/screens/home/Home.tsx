@@ -16,22 +16,6 @@ export default function Home() {
 					stories)
 				</p>
 			</div>
-			<div className={styles.stats}>
-				<div className={styles.stat}>
-					<span className={styles.statNumber}>10+</span>
-					<span className={styles.statLabel}>
-						Years of "let me take a look"
-					</span>
-				</div>
-				<div className={`${styles.stat} ${styles.statMiddle}`}>
-					<span className={styles.statNumber}>Some Stat</span>
-					<span className={styles.statLabel}>Something about it</span>
-				</div>
-				<div className={styles.stat}>
-					<span className={styles.statNumber}>Many</span>
-					<span className={styles.statLabel}>cups of coffee</span>
-				</div>
-			</div>
 		</header>
 	);
 }
